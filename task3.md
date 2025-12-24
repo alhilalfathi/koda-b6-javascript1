@@ -39,4 +39,5 @@ flowchart TD
     ifHobbies--true-->hobbiesTrue-->selesai
     falseJane--false-->falseDan--true-->trueJohn-->selesai
     falseDan--false-->falseJohn-->selesai
+    ifHobbies--false-->selesai
 ```
