@@ -14,9 +14,9 @@ flowchart TD
     trueDan1@{ shape: lean-r, label: "Output: #quot;Whats'up #quot;+fullName"}
 
     ifAge@{ shape: diamond, label: "age > 18"}
-    ageTrue@{ shape: lean-r, label: "#quot;How are you today?#quot;"}
+    ageTrue@{ shape: lean-r, label: "Output: #quot;How are you today?#quot;"}
 
-    ageFalse@{ shape: lean-r, label: "#quot;Lets go to school!#quot;"}
+    ageFalse@{ shape: lean-r, label: "Output: #quot;Lets go to school!#quot;"}
 
     ifHobbies@{ shape: diamond, label: "hobbies[0] === #quot;Programming#quot;"}
 
@@ -24,9 +24,9 @@ flowchart TD
 
     falseDan@{ shape: diamond, label: "fullName === #quot;John#quot;"}
 
-    trueJohn@{ shape: lean-r, label: "#quot;Hi #quot;+fullName"}
+    trueJohn@{ shape: lean-r, label: "Output: #quot;Hi #quot;+fullName"}
     
-    falseJohn@{ shape: lean-r, label: "#quot;Hola#quot;"}
+    falseJohn@{ shape: lean-r, label: "Output: #quot;Hola#quot;"}
     selesai@{ shape: dbl-circ}
 
 
