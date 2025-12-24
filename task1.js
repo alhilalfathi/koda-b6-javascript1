@@ -1,5 +1,5 @@
 let r = 15
-let phi
+let phi = 0
 
 if(r % 7 == 0){
      phi = 22/7
@@ -7,6 +7,7 @@ if(r % 7 == 0){
 }else{
      phi = 3.14
     //  console.log("Phi = 3.14")
+
 }
 
 const luas = phi*r*r

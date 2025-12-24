@@ -6,6 +6,7 @@
 flowchart TD
     mulai@{ shape: circle}
     input@{ shape: lean-r, label: "Input: r"}
+    letphi@{ label: "phi = 0"}
     if@{ shape: diamond, label: "r % 7 == 0"}
     phi1@{ label: "phi = 3.14"}
     phi2@{ label: "phi = 22/7"}
@@ -15,7 +16,7 @@ flowchart TD
     output2@{ shape: lean-r, label: "Output: #quot;Keliling lingkaran : #quot;+keliling"}
     selesai@{ shape: dbl-circ}
 
-    mulai-->input-->if
+    mulai-->input-->letphi-->if
     if--false-->phi1
     if--true-->phi2
     phi2-->rumus
