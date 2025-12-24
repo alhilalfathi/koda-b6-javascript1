@@ -4,17 +4,28 @@ flowchart TD
     inputName@{ shape: lean-r, label: "Input: fullName = #quot;John#quot;"}
     inputAge@{ shape: lean-r, label: "Input: age = #quot;20#quot;"}
     inputHobbies@{ shape: lean-r, label: "Input: hobbies = [#quot;Programming#quot;]"}
+
     ifJane@{ shape: diamond, label: "fullName === #quot;Jane#quot;"}
-    trueJane@{ shape: lean-r, label: "Output: Hello fullName ${fullName}"}
+
+    trueJane@{ shape: lean-r, label: "Output: #quot;Hello #quot;+fullName"}
+
     falseJane@{ shape: diamond, label: "fullName === #quot;Dan#quot; || fullName === #quot;John#quot;"}
-    trueDan1@{ shape: lean-r, label: "Output: Whatsup ${fullName}"}
+
+    trueDan1@{ shape: lean-r, label: "Output: #quot;Whats'up #quot;+fullName"}
+
     ifAge@{ shape: diamond, label: "age > 18"}
     ageTrue@{ shape: lean-r, label: "#quot;How are you today?#quot;"}
+
     ageFalse@{ shape: lean-r, label: "#quot;Lets go to school!#quot;"}
+
     ifHobbies@{ shape: diamond, label: "hobbies[0] === #quot;Programming#quot;"}
+
     hobbiesTrue@{ shape: lean-r, label: "Output: #quot;I love JavaScript#quot;"}
+
     falseDan@{ shape: diamond, label: "fullName === #quot;John#quot;"}
-    trueJohn@{ shape: lean-r, label: "#quot;Hi ${fullName} #quot;"}
+
+    trueJohn@{ shape: lean-r, label: "#quot;Hi #quot;+fullName"}
+    
     falseJohn@{ shape: lean-r, label: "#quot;Hola#quot;"}
     selesai@{ shape: dbl-circ}
 
