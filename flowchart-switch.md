@@ -6,7 +6,7 @@ flowchart TD
     
     case1@{ shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
     case1True@{ shape: lean-r, label: "Output: #quot;Hello#quot;"}
-    case2@{ shape: diamond, label: "IS_FEATURE_ACTIVE == fasle"}
+    case2@{ shape: diamond, label: "IS_FEATURE_ACTIVE == false"}
     case2True@{ shape: lean-r, label: "Output: #quot;Hi#quot;"}
     default@{ shape: diamond, label: "num === 100"}
     ifTrue@{ shape: lean-r, label: "Output: num"}
