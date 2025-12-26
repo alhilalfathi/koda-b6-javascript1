@@ -12,12 +12,13 @@ flowchart TD
     ifTrue@{ shape: lean-r, label: "Output: num"}
     ifFalse@{ shape: lean-r, label: "#quot;Bonjour!#quot;"}
     selesai@{ shape: dbl-circ}
+    output@{ shape: lean-r, label: "Output: #quot;Lanjutan#quot;"}
 
 mulai-->input-->input2-->switch-->case1
-case1--true-->case1True-->selesai
+case1--true-->case1True-->output-->selesai
 case1--false-->case2
-case2--true-->case2True-->selesai
+case2--true-->case2True-->output-->selesai
 case2--false-->default
-default--true-->ifTrue-->selesai
-default--false-->ifFalse-->selesai
+default--true-->ifTrue-->output-->selesai
+default--false-->ifFalse-->output-->selesai
 ```
