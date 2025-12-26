@@ -8,6 +8,7 @@ flowchart TD
     input2@{ shape: lean-r, label: "Input: tempSource = #quot;Fahrenheit#quot;"}
     input3@{ shape: lean-r, label: "Input: convertTo=  #quot;Reamur#quot;"}
     error@{ shape: lean-r, label: "#quot;ERROR#quot;"}
+    stop@{ shape: dbl-circ}
 
     ifSource1@{ shape: diamond, label: "tempSource == #quot;Celcius#quot;"}
     ifSource2@{ shape: diamond, label: "tempSource == #quot;Fahrenheit#quot;"}
@@ -69,37 +70,37 @@ start-->input1-->input2-->input3-->ifSource1
 ifSource1--false-->ifSource2
 ifSource1--true-->ifCelcius1
 ifCelcius1--false-->ifCelcius2
-ifCelcius1--true-->celciusF-->cOutF
+ifCelcius1--true-->celciusF-->cOutF------->stop
 ifCelcius2--false-->ifCelcius3
-ifCelcius2--true-->celciusR-->cOutR
-ifCelcius3--true-->celciusK-->coutK
+ifCelcius2--true-->celciusR-->cOutR------->stop
+ifCelcius3--true-->celciusK-->coutK------->stop
 ifCelcius3--false------>error
 
 ifSource2--false-->ifSource3
 ifSource2--true-->ifFahrenheit1
 ifFahrenheit1--false-->ifFahrenheit2
-ifFahrenheit1--true-->fahrenheitC-->fOutC
+ifFahrenheit1--true-->fahrenheitC-->fOutC------->stop
 ifFahrenheit2--false-->ifFahrenheit3
-ifFahrenheit2--true-->fahrenheitR-->fOutR
+ifFahrenheit2--true-->fahrenheitR-->fOutR------->stop
 ifFahrenheit3--false------>error
-ifFahrenheit3--true-->fahrenheitK-->fOutK
+ifFahrenheit3--true-->fahrenheitK-->fOutK------->stop
 
 ifSource3--false-->ifSource4
 ifSource3--true-->ifReamur1
 ifReamur1--false-->ifReamur2
-ifReamur1--true-->reamurC-->rOutC
+ifReamur1--true-->reamurC-->rOutC------->stop
 ifReamur2--false-->ifReamur3
-ifReamur2--true-->reamurF-->rOutF
+ifReamur2--true-->reamurF-->rOutF------->stop
 ifReamur3--false------>error
-ifReamur3--true-->reamurK-->rOutK
+ifReamur3--true-->reamurK-->rOutK------->stop
 
 ifSource4--false---->error
 ifSource4--true-->ifKelvin1
 ifKelvin1--false-->ifKelvin2
-ifKelvin1--true-->kelvinC-->kOutC
+ifKelvin1--true-->kelvinC-->kOutC------->stop
 ifKelvin2--false-->ifKelvin3
-ifKelvin2--true-->kelvinF-->kOutF
+ifKelvin2--true-->kelvinF-->kOutF------->stop
 ifKelvin3--false------>error
-ifKelvin3--true-->kelvinR-->kOutR
+ifKelvin3--true-->kelvinR-->kOutR------->stop
 
 ```
