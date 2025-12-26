@@ -17,8 +17,8 @@ flowchart TD
 mulai-->input-->input2-->switch-->case1
 case1--true-->case1True-->output-->selesai
 case1--false-->case2
-case2--true-->case2True-->output-->selesai
+case2--true-->case2True-->output
 case2--false-->default
-default--true-->ifTrue-->output-->selesai
-default--false-->ifFalse-->output-->selesai
+default--true-->ifTrue-->output
+default--false-->ifFalse-->output
 ```
