@@ -7,7 +7,7 @@ flowchart TD
     input1@{ shape: lean-r, label: "Input: temp = 34"}
     input2@{ shape: lean-r, label: "Input: tempSource = #quot;Fahrenheit#quot;"}
     input3@{ shape: lean-r, label: "Input: convertTo=  #quot;Reamur#quot;"}
-    error@{ shape: lean-r, label: "#quot;ERROR#quot;"}
+    error@{ shape: lean-r, label: "#quot;Input Invalid#quot;"}
     stop@{ shape: dbl-circ}
 
     ifSource1@{ shape: diamond, label: "tempSource == #quot;Celcius#quot;"}
