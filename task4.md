@@ -21,6 +21,9 @@ flowchart TD
     celciusF@{ label: "outTemp = temp * (9/5) + 32"}
     celciusR@{ label: "outTemp = temp * (4/5)"}
     celciusK@{ label: "outTemp = temp + 273"}
+    cOutF@{ shape: lean-r, label: "Output: outTemp"}
+    cOutR@{ shape: lean-r, label: "Output: outTemp"}
+    cOutK@{ shape: lean-r, label: "Output: outTemp"}
 
 
 
@@ -31,6 +34,9 @@ flowchart TD
     fahrenheitC@{ label: "outTemp = temp * (9/5) + 32"}
     fahrenheitR@{ label: "outTemp = temp * (9/4) + 32"}
     fahrenheitK@{ label: "outTemp = 9/5 * (temp - 273) + 32"}
+    fOutC@{ shape: lean-r, label: "Output: outTemp"}
+    fOutR@{ shape: lean-r, label: "Output: outTemp"}
+    fOutK@{ shape: lean-r, label: "Output: outTemp"}
 
 
     ifReamur1@{ shape: diamond, label: "convertTo == #quot;Celcius#quot;"}
@@ -40,6 +46,9 @@ flowchart TD
     reamurC@{ label: "outTemp = temp * (4/5)"}
     reamurF@{ label: "outTemp = 4/9 * (temp-32)"}
     reamurK@{ label: "outTemp = 4/5 * (temp-273)"}
+    rOutC@{ shape: lean-r, label: "Output: outTemp"}
+    rOutF@{ shape: lean-r, label: "Output: outTemp"}
+    rOutK@{ shape: lean-r, label: "Output: outTemp"}
 
 
     ifKelvin1@{ shape: diamond, label: "convertTo == #quot;Celcius#quot;"}
@@ -49,6 +58,9 @@ flowchart TD
     kelvinC@{ label: "outTemp = temp - 273"}
     kelvinF@{ label: "outTemp = 9/5 * (temp-273)+32"}
     kelvinR@{ label: "outTemp = 4/5 * (temp - 273)"}
+    kOutC@{ shape: lean-r, label: "Output: outTemp"}
+    kOutF@{ shape: lean-r, label: "Output: outTemp"}
+    kOutR@{ shape: lean-r, label: "Output: outTemp"}
 
 
 
@@ -57,37 +69,37 @@ start-->input1-->input2-->input3-->ifSource1
 ifSource1--false-->ifSource2
 ifSource1--true-->ifCelcius1
 ifCelcius1--false-->ifCelcius2
-ifCelcius1--true-->celciusF
+ifCelcius1--true-->celciusF-->cOutF
 ifCelcius2--false-->ifCelcius3
-ifCelcius2--true-->celciusR
-ifCelcius3--true-->celciusK
+ifCelcius2--true-->celciusR-->cOutR
+ifCelcius3--true-->celciusK-->coutK
 ifCelcius3--false------>error
 
 ifSource2--false-->ifSource3
 ifSource2--true-->ifFahrenheit1
 ifFahrenheit1--false-->ifFahrenheit2
-ifFahrenheit1--true-->fahrenheitC
+ifFahrenheit1--true-->fahrenheitC-->fOutC
 ifFahrenheit2--false-->ifFahrenheit3
-ifFahrenheit2--true-->fahrenheitR
-ifFahrenheit3--false----->error
-ifFahrenheit3--true-->fahrenheitK
+ifFahrenheit2--true-->fahrenheitR-->fOutR
+ifFahrenheit3--false------>error
+ifFahrenheit3--true-->fahrenheitK-->fOutK
 
 ifSource3--false-->ifSource4
 ifSource3--true-->ifReamur1
 ifReamur1--false-->ifReamur2
-ifReamur1--true-->reamurC
+ifReamur1--true-->reamurC-->rOutC
 ifReamur2--false-->ifReamur3
-ifReamur2--true-->reamurF
-ifReamur3--false---->error
-ifReamur3--true-->reamurK
+ifReamur2--true-->reamurF-->rOutF
+ifReamur3--false------>error
+ifReamur3--true-->reamurK-->rOutK
 
 ifSource4--false---->error
 ifSource4--true-->ifKelvin1
 ifKelvin1--false-->ifKelvin2
-ifKelvin1--true-->kelvinC
+ifKelvin1--true-->kelvinC-->kOutC
 ifKelvin2--false-->ifKelvin3
-ifKelvin2--true-->kelvinF
-ifKelvin3--false---->error
-ifKelvin3--true-->kelvinR
+ifKelvin2--true-->kelvinF-->kOutF
+ifKelvin3--false------>error
+ifKelvin3--true-->kelvinR-->kOutR
 
 ```
