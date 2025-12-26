@@ -19,12 +19,12 @@ flowchart TD
     ifCelcius2@{ shape: diamond, label: "convertTo == #quot;Reamur#quot;"}
     ifCelcius3@{ shape: diamond, label: "convertTo == #quot;Kelvin#quot;"}
 
-    celciusF@{ label: "outTemp = temp * (9/5) + 32"}
-    celciusR@{ label: "outTemp = temp * (4/5)"}
-    celciusK@{ label: "outTemp = temp + 273"}
-    cOutF@{ shape: lean-r, label: "Output: outTemp"}
-    cOutR@{ shape: lean-r, label: "Output: outTemp"}
-    cOutK@{ shape: lean-r, label: "Output: outTemp"}
+    celciusF@{ label: "tempOut = temp * (9/5) + 32"}
+    celciusR@{ label: "tempOut = temp * (4/5)"}
+    celciusK@{ label: "tempOut = temp + 273"}
+    cOutF@{ shape: lean-r, label: "Output: tempOut"}
+    cOutR@{ shape: lean-r, label: "Output: tempOut"}
+    cOutK@{ shape: lean-r, label: "Output: tempOut"}
 
 
 
@@ -32,36 +32,36 @@ flowchart TD
     ifFahrenheit2@{ shape: diamond, label: "convertTo == #quot;Reamur#quot;"}
     ifFahrenheit3@{ shape: diamond, label: "convertTo == #quot;Kelvin#quot;"}
 
-    fahrenheitC@{ label: "outTemp = temp * (9/5) + 32"}
-    fahrenheitR@{ label: "outTemp = temp * (9/4) + 32"}
-    fahrenheitK@{ label: "outTemp = 9/5 * (temp - 273) + 32"}
-    fOutC@{ shape: lean-r, label: "Output: outTemp"}
-    fOutR@{ shape: lean-r, label: "Output: outTemp"}
-    fOutK@{ shape: lean-r, label: "Output: outTemp"}
+    fahrenheitC@{ label: "tempOut = temp * (9/5) + 32"}
+    fahrenheitR@{ label: "tempOut = temp * (9/4) + 32"}
+    fahrenheitK@{ label: "tempOut = 9/5 * (temp - 273) + 32"}
+    fOutC@{ shape: lean-r, label: "Output: tempOut"}
+    fOutR@{ shape: lean-r, label: "Output: tempOut"}
+    fOutK@{ shape: lean-r, label: "Output: tempOut"}
 
 
     ifReamur1@{ shape: diamond, label: "convertTo == #quot;Celcius#quot;"}
     ifReamur2@{ shape: diamond, label: "convertTo == #quot;Fahrenheit#quot;"}
     ifReamur3@{ shape: diamond, label: "convertTo == #quot;Kelvin#quot;"}
 
-    reamurC@{ label: "outTemp = temp * (4/5)"}
-    reamurF@{ label: "outTemp = 4/9 * (temp-32)"}
-    reamurK@{ label: "outTemp = 4/5 * (temp-273)"}
-    rOutC@{ shape: lean-r, label: "Output: outTemp"}
-    rOutF@{ shape: lean-r, label: "Output: outTemp"}
-    rOutK@{ shape: lean-r, label: "Output: outTemp"}
+    reamurC@{ label: "tempOut = temp * (4/5)"}
+    reamurF@{ label: "tempOut = 4/9 * (temp-32)"}
+    reamurK@{ label: "tempOut = 4/5 * (temp-273)"}
+    rOutC@{ shape: lean-r, label: "Output: tempOut"}
+    rOutF@{ shape: lean-r, label: "Output: tempOut"}
+    rOutK@{ shape: lean-r, label: "Output: tempOut"}
 
 
     ifKelvin1@{ shape: diamond, label: "convertTo == #quot;Celcius#quot;"}
     ifKelvin2@{ shape: diamond, label: "convertTo == #quot;Fahrenheit#quot;"}
     ifKelvin3@{ shape: diamond, label: "convertTo == #quot;Reamur#quot;"}
 
-    kelvinC@{ label: "outTemp = temp - 273"}
-    kelvinF@{ label: "outTemp = 9/5 * (temp-273)+32"}
-    kelvinR@{ label: "outTemp = 4/5 * (temp - 273)"}
-    kOutC@{ shape: lean-r, label: "Output: outTemp"}
-    kOutF@{ shape: lean-r, label: "Output: outTemp"}
-    kOutR@{ shape: lean-r, label: "Output: outTemp"}
+    kelvinC@{ label: "tempOut = temp - 273"}
+    kelvinF@{ label: "tempOut = 9/5 * (temp-273)+32"}
+    kelvinR@{ label: "tempOut = 4/5 * (temp - 273)"}
+    kOutC@{ shape: lean-r, label: "Output: tempOut"}
+    kOutF@{ shape: lean-r, label: "Output: tempOut"}
+    kOutR@{ shape: lean-r, label: "Output: tempOut"}
 
 
 
