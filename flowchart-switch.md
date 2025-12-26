@@ -3,7 +3,7 @@ flowchart TD
     mulai@{ shape: circle}
     input@{ shape: lean-r, label: "Input: IS_FEATURE_ACTIVE = #quot;#quot;"}
     input2@{ shape: lean-r, label: "Input: num = 100"}
-    switch@{ label: IS_FEATURE_ACTIVE }
+    
     case1@{ shape: diamond, label: "IS_FEATURE_ACTIVE == true"}
     case1True@{ shape: lean-r, label: "Output: #quot;Hello#quot;"}
     case2@{ shape: diamond, label: "IS_FEATURE_ACTIVE == fasle"}
@@ -14,7 +14,7 @@ flowchart TD
     selesai@{ shape: dbl-circ}
     output@{ shape: lean-r, label: "Output: #quot;Lanjutan#quot;"}
 
-mulai-->input-->input2-->switch-->case1
+mulai-->input-->input2-->case1
 case1--true-->case1True-->output-->selesai
 case1--false-->case2
 case2--true-->case2True-->output
