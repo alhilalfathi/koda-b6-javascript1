@@ -72,7 +72,7 @@ ifCelcius1--false-->ifCelcius2
 ifCelcius1--true-->celciusF-->cOutF------->stop
 ifCelcius2--false-->ifCelcius3
 ifCelcius2--true-->celciusR-->cOutR------->stop
-ifCelcius3--true-->celciusK-->coutK------->stop
+ifCelcius3--true-->celciusK-->cOutK------->stop
 ifCelcius3--false------>error
 
 ifSource2--false-->ifSource3
