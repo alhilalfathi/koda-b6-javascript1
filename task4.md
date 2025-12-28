@@ -99,7 +99,7 @@ ifKelvin1--false-->ifKelvin2
 ifKelvin1--true-->kelvinC-->kOutC------->stop
 ifKelvin2--false-->ifKelvin3
 ifKelvin2--true-->kelvinF-->kOutF------->stop
-ifKelvin3--false------>error
+ifKelvin3--false------>error--->stop
 ifKelvin3--true-->kelvinR-->kOutR------->stop
 
 ```
